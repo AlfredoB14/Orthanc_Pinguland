@@ -1,0 +1,9 @@
+version: "3"
+services:
+  orthanc:
+    build: .
+    ports:
+      - "8042:8042"
+      - "4242:4242"
+    volumes:
+      - ./dicom-data:/var/lib/orthanc/db
